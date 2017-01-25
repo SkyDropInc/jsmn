@@ -2,6 +2,7 @@
 #define __JSMN_H_
 
 #include <stddef.h>
+#include <asf.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,11 +40,11 @@ enum jsmnerr {
  */
 typedef struct {
 	jsmntype_t type;
-	int start;
-	int end;
-	int size;
+	uint16_t start;
+	uint16_t end;
+	uint16_t size;
 #ifdef JSMN_PARENT_LINKS
-	int parent;
+	uint16_t parent;
 #endif
 } jsmntok_t;
 
